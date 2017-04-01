@@ -31,4 +31,65 @@
         android:ems="10"
         android:layout_toRightOf="@id/txt_name"
         android:id="@+id/edt_name" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/txt_name"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:id="@+id/txt_desc" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:layout_toRightOf="@id/txt_desc"
+        android:layout_alignParentTop="true"
+        android:id="@+id/edt_desc" />
+
+    <TextView
+        android:text="Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/txt_desc"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:id="@+id/txt_price" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:layout_toRightOf="@id/txt_price"
+        android:layout_alignParentTop="true"
+        android:id="@+id/edt_price" />
+
+    <TextView
+        android:id="@+id/txt_review"
+        android:text="Review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/txt_price"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"/>
+
+    <EditText
+        android:id="@+id/edt_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="review"
+        android:ems="10"
+        android:layout_toRightOf="@id/txt_review"
+        android:layout_alignParentTop="true"
+        />
 </RelativeLayout>

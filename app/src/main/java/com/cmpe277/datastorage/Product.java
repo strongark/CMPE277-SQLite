@@ -9,4 +9,11 @@ public class Product {
     String description="";
     String review="";
     Double price=0.0;
+
+    Product(String _name, String _desc, String _review, Double _price){
+      name=_name;
+      description=_desc;
+      review=_review;
+      price=_price;
+    }
 }

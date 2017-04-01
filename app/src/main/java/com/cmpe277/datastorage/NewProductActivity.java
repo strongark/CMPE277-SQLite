@@ -26,4 +26,15 @@ public class NewProductActivity extends AppCompatActivity {
         });
     }
 
+    public void onSaveProduct(View view){
+      String name=((EditText)findViewById(R.id.edt_name)).getText().toString();
+      String desc=((EditText)findViewById(R.id.edt_desc)).getText().toString();
+      String price=((EditText)findViewById(R.id.edt_price)).getText().toString();
+      String review=((EditText)findViewById(R.id.edt_review)).getText().toString();
+
+      DbController db = new DbController(getBaseContext());
+      db.open();
+      db.insert(new prodItem(name,desc,review,Double.parse(price)));
+      db.close();
+    }
 }

@@ -49,4 +49,18 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-}
+
+    public void onSearchProduct(View view){
+      String searchText="";
+      DbController db = new DbController(getBaseContext());
+      db.open();
+      try(Cursor cu= searchByName( searchText)){//this try (with resrouce) available from API 19+
+        while(cu.moveToNext()){
+          //TODO display result on main activity list;
+          //cu.getString(column name);
+
+        }
+      }
+      db.close();
+    }
+  }
