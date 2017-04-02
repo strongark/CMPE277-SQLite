@@ -1,5 +1,6 @@
 package com.cmpe277.datastorage;
 
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
       String searchText="";
       DbController db = new DbController(getBaseContext());
       db.open();
-      try(Cursor cu= searchByName( searchText)){//this try (with resrouce) available from API 19+
+      try(Cursor cu= db.searchByName( searchText)){//this try (with resrouce) available from API 19+
         while(cu.moveToNext()){
           //TODO display result on main activity list;
           //cu.getString(column name);
