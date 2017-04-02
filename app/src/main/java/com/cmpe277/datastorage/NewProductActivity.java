@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
 
 public class NewProductActivity extends AppCompatActivity {
 
@@ -34,7 +35,7 @@ public class NewProductActivity extends AppCompatActivity {
 
       DbController db = new DbController(getBaseContext());
       db.open();
-      db.insert(new prodItem(name,desc,review,Double.parse(price)));
+      db.insert(new Product(name,desc,review,Double.parseDouble(price)));
       db.close();
     }
 }

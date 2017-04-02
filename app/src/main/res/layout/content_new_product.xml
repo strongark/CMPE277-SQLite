@@ -33,7 +33,7 @@
         android:id="@+id/edt_name" />
 
     <TextView
-        android:text="TextView"
+        android:text="Description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -46,10 +46,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="desc"
         android:ems="10"
         android:layout_toRightOf="@id/txt_desc"
-        android:layout_alignParentTop="true"
+        android:layout_below="@id/edt_name"
         android:id="@+id/edt_desc" />
 
     <TextView
@@ -66,10 +66,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="Price"
         android:ems="10"
         android:layout_toRightOf="@id/txt_price"
-        android:layout_alignParentTop="true"
+        android:layout_below="@id/edt_desc"
         android:id="@+id/edt_price" />
 
     <TextView
@@ -87,9 +87,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="review"
+        android:text="Review"
         android:ems="10"
         android:layout_toRightOf="@id/txt_review"
-        android:layout_alignParentTop="true"
+        android:layout_below="@id/edt_price"
         />
+    <Button
+        android:id="@id/add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="SAVE"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/add_btn"
+        android:text="CANCEL"/>
 </RelativeLayout>
