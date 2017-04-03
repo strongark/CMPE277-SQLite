@@ -14,13 +14,16 @@
     tools:showIn="@layout/activity_new_product">
 
     <TextView
-        android:text="TextView"
+        android:text="Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_marginStart="@dimen/activity_vertical_margin"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:ems="5"
+        android:textSize="16sp"
+        android:textStyle="bold"
         android:id="@+id/txt_name" />
 
     <EditText
@@ -35,11 +38,14 @@
     <TextView
         android:text="Description"
         android:layout_width="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@id/txt_name"
         android:layout_marginStart="@dimen/activity_vertical_margin"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:ems="5"
         android:id="@+id/txt_desc" />
 
     <EditText
@@ -57,9 +63,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:textSize="16sp"
+        android:textStyle="bold"
         android:layout_below="@id/txt_desc"
         android:layout_marginStart="@dimen/activity_vertical_margin"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:ems="5"
         android:id="@+id/txt_price" />
 
     <EditText
@@ -77,8 +86,12 @@
         android:text="Review"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:paddingTop="@dimen/activity_horizontal_margin"
         android:layout_alignParentLeft="true"
         android:layout_below="@id/txt_price"
+        android:ems="5"
         android:layout_marginStart="@dimen/activity_vertical_margin"
         android:layout_marginTop="@dimen/activity_horizontal_margin"/>
 
@@ -96,13 +109,17 @@
         android:id="@id/add_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="SAVE"/>
+        android:text="SAVE"
+        android:onClick="onSaveProduct"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/txt_review"
+        android:layout_marginStart="60dp" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@id/add_btn"
-        android:text="CANCEL"/>
+        android:text="CANCEL"
+        android:layout_alignBaseline="@+id/add_btn"
+        android:layout_alignBottom="@+id/add_btn"
+        android:layout_toEndOf="@+id/add_btn"
+        android:layout_marginStart="31dp" />
 </RelativeLayout>

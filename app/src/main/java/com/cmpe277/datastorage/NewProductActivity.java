@@ -38,4 +38,8 @@ public class NewProductActivity extends AppCompatActivity {
       db.insert(new Product(name,desc,review,Double.parseDouble(price)));
       db.close();
     }
+
+    public void onCancel(View view){
+        this.finish();
+    }
 }
