@@ -21,7 +21,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_new_product" />
+    <include layout="@layout/activity_new_product_linear" />
 
 
 </android.support.design.widget.CoordinatorLayout>

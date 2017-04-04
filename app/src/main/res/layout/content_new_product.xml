@@ -15,10 +15,22 @@
 
     <TextView
         android:text="Name"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:ems="5"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:id="@+id/txt_title" />
+
+    <TextView
+        android:text="Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_marginStart="@dimen/activity_vertical_margin"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:ems="5"
@@ -30,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="Name"
         android:ems="10"
         android:layout_toRightOf="@id/txt_name"
         android:id="@+id/edt_name" />
@@ -52,7 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="desc"
+        android:hint="Description"
         android:ems="10"
         android:layout_toRightOf="@id/txt_desc"
         android:layout_below="@id/edt_name"
@@ -75,7 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Price"
+        android:hint="Price"
         android:ems="10"
         android:layout_toRightOf="@id/txt_price"
         android:layout_below="@id/edt_desc"
@@ -100,7 +112,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Review"
+        android:hint="Review"
         android:ems="10"
         android:layout_toRightOf="@id/txt_review"
         android:layout_below="@id/edt_price"
@@ -121,5 +133,6 @@
         android:layout_alignBaseline="@+id/add_btn"
         android:layout_alignBottom="@+id/add_btn"
         android:layout_toEndOf="@+id/add_btn"
-        android:layout_marginStart="31dp" />
+        android:layout_marginStart="31dp"
+        android:onClick="onCancel"/>
 </RelativeLayout>

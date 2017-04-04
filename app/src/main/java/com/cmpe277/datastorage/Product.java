@@ -16,4 +16,16 @@ public class Product {
       review=_review;
       price=_price;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder(
+                String.format("Item name:%s'\nItem Description:%s'\nPrice'\n",name,description,price));
+
+        if(!review.isEmpty()){
+            builder.append("'\nReview:"+review);
+        }
+
+        return builder.toString();
+    }
 }

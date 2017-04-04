@@ -21,15 +21,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+//
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.add_btn);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
     }
 
     @Override
@@ -63,10 +63,12 @@ public class MainActivity extends AppCompatActivity {
       try(Cursor cu= db.searchByName( searchText)){//this try (with resrouce) available from API 19+
         while(cu.moveToNext()){
           //TODO display result on main activity list;
-            searchResult.append(cu.getString(0)+"\n");//name
-            searchResult.append(cu.getString(1)+"\n");//description
-            searchResult.append(cu.getString(2)+"\n");//price
-            searchResult.append(cu.getString(3)+"\n");//review
+            searchResult.append("Name: "+ cu.getString(0)+"\n");//name
+            searchResult.append("Description: "+cu.getString(1)+"\n");//description
+            searchResult.append("Price: "+cu.getString(2)+"$\n");//price
+            if(!cu.getString(3).isEmpty())
+                searchResult.append("Review: "+cu.getString(3)+"\n");//review
+            searchResult.append("--------------------------------");//review
         }
       }
       db.close();
@@ -76,5 +78,11 @@ public class MainActivity extends AppCompatActivity {
     public void onNewProduct(View view){
         Intent newProduct = new Intent(this,NewProductActivity.class);
         startActivity(newProduct);
+    }
+
+    public void onClear(View view){
+        ((TextView)findViewById(R.id.txt_result)).setText("");
+        ((TextView)findViewById(R.id.edt_search)).setText("");
+
     }
   }
