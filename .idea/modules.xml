@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CMPE277-SQLite.iml" filepath="$PROJECT_DIR$/CMPE277-SQLite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW5-DataStorage.iml" filepath="$PROJECT_DIR$/HW5-DataStorage.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
