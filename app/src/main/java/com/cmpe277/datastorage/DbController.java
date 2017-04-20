@@ -12,7 +12,7 @@ import android.database.sqlite.SQLiteDatabase;
 public class DbController {
 
     public static final String DATABASE_NAME="datastorage.db";
-    public static final int DATABASE_VERSION=1;
+    public static final int DATABASE_VERSION=2;
     public static final String TABLE_NAME="Product";
 
     DbHelper dbHelper;
@@ -49,8 +49,8 @@ public class DbController {
     public Cursor searchByName(String productName)
     {
         //// TODO: 3/28/17 update the where clause to ignore case
-        return db.query(TABLE_NAME, new String[]{"Name","Description","Price","Review"}
-                        , "Name=?",new String[]{productName}, null, null, "Name ASC");
+        return db.query(TABLE_NAME, new String[]{"rowid","Name","Description","Price","Review"}
+                        , "Name like ?",new String[]{"%"+productName+"%"}, null, null, "Name ASC");
     }
 
 }

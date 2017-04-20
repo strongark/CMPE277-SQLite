@@ -5,6 +5,7 @@ package com.cmpe277.datastorage;
  */
 
 public class Product {
+    Integer id;
     String name="";
     String description="";
     String review="";
@@ -15,6 +16,14 @@ public class Product {
       description=_desc;
       review=_review;
       price=_price;
+    }
+
+    Product(Integer _id, String _name, String _desc, String _review, Double _price){
+        id=_id;
+        name=_name;
+        description=_desc;
+        review=_review;
+        price=_price;
     }
 
     @Override

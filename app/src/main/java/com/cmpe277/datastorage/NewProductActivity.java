@@ -16,8 +16,21 @@ public class NewProductActivity extends AppCompatActivity {
         setContentView(R.layout.activity_new_product);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        Bundle bundle=getIntent().getExtras();
 
+        EditText edt_name=((EditText)findViewById(R.id.edt_name));
+        EditText edt_desc=((EditText)findViewById(R.id.edt_desc));
+        EditText edt_price=((EditText)findViewById(R.id.edt_price));
+        EditText edt_review=((EditText)findViewById(R.id.edt_review));
+
+        if(bundle!=null){
+            edt_name.setText(bundle.getString("Name"));
+            edt_desc.setText(bundle.getString("Description"));
+            edt_desc.setText(bundle.getString("Price"));
+            edt_desc.setText(bundle.getString("Review"));
+        }
     }
+
 
     public void onSaveProduct(View view){
       String name=((EditText)findViewById(R.id.edt_name)).getText().toString();
