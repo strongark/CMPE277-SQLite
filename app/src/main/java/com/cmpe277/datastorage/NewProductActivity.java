@@ -26,8 +26,8 @@ public class NewProductActivity extends AppCompatActivity {
         if(bundle!=null){
             edt_name.setText(bundle.getString("Name"));
             edt_desc.setText(bundle.getString("Description"));
-            edt_desc.setText(bundle.getString("Price"));
-            edt_desc.setText(bundle.getString("Review"));
+            edt_price.setText(bundle.getString("Price"));
+            edt_review.setText(bundle.getString("Review"));
         }
     }
 

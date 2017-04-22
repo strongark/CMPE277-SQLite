@@ -103,7 +103,6 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
-
     }
 
     public void onNewProduct(View view){
@@ -114,7 +113,6 @@ public class MainActivity extends AppCompatActivity {
     public void onClear(View view){
         //((TextView)findViewById(R.id.txt_result)).setText("");
         ((TextView)findViewById(R.id.edt_search)).setText("");
-
     }
 
     private class ListProductArrayAdapter extends ArrayAdapter<Product>{
